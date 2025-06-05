@@ -51,7 +51,7 @@ public class NBAGame {
                     
                     if (guess.equalsIgnoreCase("quit")) {
                         continuePlay = "no";
-                        System.out.println("/nGood try!");
+                        System.out.println("\nGood try!");
                         System.out.println("\n" + NBAPlayer.getPosition());
                         System.out.println("Player: " + NBAPlayer.getName());
                         System.out.println("Points Per Game: " + stats.getPoints());
@@ -80,7 +80,12 @@ public class NBAGame {
                         if (attempts != 1) {
                             System.out.print("s");
                         }
-                        System.out.println(" to guess correctly! You used " + hints + " hints.");
+                        System.out.print(" to guess correctly! You used " + hints + " hint");
+                        if (hints != 1) {
+                            System.out.println("s.");
+                        } else {
+                            System.out.println(".");
+                        }
                         correctGuess = true;
                         numWins++;
                         
